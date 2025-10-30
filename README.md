@@ -231,7 +231,7 @@ Proyek ini dilisensikan under MIT License - lihat file [LICENSE](LICENSE) untuk 
 
 ## Kontak
 
-- **Nama**: Hiro Petshop Development Team
+- **Nama**:Nabila PK
 - **Email**: info@hiro_petshop.com
 - **Website**: https://hiro_petshop.com
 
