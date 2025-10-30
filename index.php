@@ -186,7 +186,7 @@ if (isset($_SESSION['user_id'])) {
     </div>
     
     <footer>
-        &copy; <?= date('Y') ?> Hiro Petshop. Sistem Manajemen Produk oleh Triya Khairun Nisa.
+        &copy; <?= date('Y') ?> Hiro Petshop. Sistem Manajemen Produk oleh Nabila Putri Karni.
     </footer>
 </body>
 </html>

@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 if (!isset($_SESSION['user_id']) || !isset($_GET['id'])) {
-    header('Location: produk.php'); // ✅ Tetap pakai produk.php
+    header('Location: produk.php'); 
     exit();
 }
 
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("UPDATE products SET name = ?, description = ?, price = ?, stock = ?, category_id = ? WHERE id = ?");
             $stmt->execute([$name, $description, $price, $stock, $category_id, $product_id]);
-            header('Location: produk.php?msg=updated'); // ✅ Tetap pakai produk.php
+            header('Location: produk.php?msg=updated'); 
             exit();
         } catch (PDOException $e) {
             error_log("Update Product Error: " . $e->getMessage());

@@ -2,9 +2,10 @@
 
 Aplikasi petshop online sederhana yang dibangun dengan PHP native tanpa framework untuk penjualan kebutuhan hewan peliharaan.
 
-## Fitur yang Tersedia
+# Fitur yang Tersedia
 
 ### CRUD Operations
+
 - **Create**: Form tambah data produk dengan validasi server-side
 - **Read**: Tampilan tabel daftar produk dengan sorting berdasarkan created_at DESC
 - **Read Detail**: Halaman khusus untuk menampilkan detail lengkap per item
@@ -12,6 +13,7 @@ Aplikasi petshop online sederhana yang dibangun dengan PHP native tanpa framewor
 - **Delete**: Tombol hapus dengan konfirmasi modal menggunakan metode POST
 
 ### Fitur Tambahan
+
 - Pencarian produk berdasarkan nama produk, kategori, dan deskripsi
 - Pagination dengan 5 item per halaman
 - Upload gambar produk dengan validasi file
@@ -36,13 +38,16 @@ Aplikasi petshop online sederhana yang dibangun dengan PHP native tanpa framewor
 ## Panduan Instalasi dan Konfigurasi
 
 ### 1. Clone atau Download Repository
+
 ```bash
 git clone <repository-url>
 cd hiro_petshop
 ```
 
 ### 2. Konfigurasi Database
+
 1. Buat database baru di MySQL:
+
    ```sql
    CREATE DATABASE hiro_petshop;
    ```
@@ -53,7 +58,9 @@ cd hiro_petshop
    ```
 
 ### 3. Konfigurasi Koneksi Database
+
 1. Salin file konfigurasi contoh:
+
    ```bash
    cp .env.example .env
    ```
@@ -69,7 +76,9 @@ cd hiro_petshop
 ### 4. Konfigurasi Web Server
 
 #### Apache
+
 Pastikan modul rewrite diaktifkan. Buat file `.htaccess`:
+
 ```apache
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -78,7 +87,9 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 ```
 
 #### Nginx
+
 Tambahkan konfigurasi berikut di server block:
+
 ```nginx
 location / {
     try_files $uri $uri/ /index.php?$query_string;
@@ -86,6 +97,7 @@ location / {
 ```
 
 ### 5. Set Permissions
+
 ```bash
 chmod -R 755 assets/images/
 chmod -R 755 config/
@@ -93,6 +105,7 @@ chmod -R 755 includes/
 ```
 
 ### 6. Akses Aplikasi
+
 Buka browser dan akses: `http://localhost/hiro_petshop`
 
 ## Struktur Folder Utama
@@ -124,6 +137,7 @@ hiro_petshop/
 ## Struktur Database
 
 ### Tabel Products
+
 ```sql
 CREATE TABLE products (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -140,23 +154,27 @@ CREATE TABLE products (
 ## Penggunaan Aplikasi
 
 ### Menambah Produk
+
 1. Klik tombol "Tambah Produk Baru" di halaman utama
-2. Isi semua field yang ditandai dengan asterisk (*)
+2. Isi semua field yang ditandai dengan asterisk (\*)
 3. Upload gambar produk (opsional)
 4. Klik "Simpan Produk"
 
 ### Mengedit Produk
+
 1. Klik tombol edit (ikon pensil) pada produk yang ingin diubah
 2. Perbarui informasi yang diperlukan
 3. Upload gambar baru jika ingin mengganti (opsional)
 4. Klik "Update Produk"
 
 ### Menghapus Produk
+
 1. Klik tombol hapus (ikon trash) pada produk yang ingin dihapus
 2. Konfirmasi penghapusan pada dialog yang muncul
 3. Produk akan dihapus beserta file gambar terkait
 
 ### Mencari Produk
+
 1. Gunakan kotak pencarian di navbar
 2. Ketik kata kunci (nama produk, kategori, atau deskripsi)
 3. Hasil akan ditampilkan secara real-time
@@ -174,23 +192,29 @@ Aplikasi ini telah dilengkapi dengan beberapa fitur keamanan:
 ## Screenshot Antarmuka Aplikasi
 
 ### Halaman Daftar Produk
+
 ![Halaman Daftar Produk](screenshots/index_page.png)
 
 ### Form Tambah Produk
+
 ![Form Tambah Produk](screenshots/create_page.png)
 
 ### Halaman Detail Produk
+
 ![Halaman Detail Produk](screenshots/detail_page.png)
 
 ## Troubleshooting
 
 ### Error Koneksi Database
+
 Pastikan konfigurasi database di `config/database.php` sudah benar dan database sudah dibuat.
 
 ### Error Upload Gambar
+
 Pastikan folder `assets/images/products/` memiliki permission yang tepat (755) dan ekstensi GD PHP sudah terinstall.
 
 ### Error 404
+
 Pastikan web server Anda sudah dikonfigurasi dengan benar untuk mengarahkan semua request ke `index.php`.
 
 ## Kontribusi
@@ -214,6 +238,7 @@ Proyek ini dilisensikan under MIT License - lihat file [LICENSE](LICENSE) untuk 
 ## Changelog
 
 ### Version 1.0.0 (2024-01-01)
+
 - Initial release
 - Basic CRUD operations
 - Search functionality

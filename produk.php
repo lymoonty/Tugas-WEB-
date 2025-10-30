@@ -30,14 +30,12 @@ if ($category_filter > 0) {
 
 $where_sql = !empty($where_conditions) ? "WHERE " . implode(" AND ", $where_conditions) : "";
 
-// Count total records
 $count_sql = "SELECT COUNT(*) FROM products p {$where_sql}";
 $count_stmt = $pdo->prepare($count_sql);
 $count_stmt->execute($params);
 $total_records = $count_stmt->fetchColumn();
 $total_pages = ceil($total_records / $records_per_page);
 
-// Fetch products
 $sql = "SELECT p.*, c.name as category_name 
         FROM products p 
         INNER JOIN categories c ON p.category_id = c.id 
