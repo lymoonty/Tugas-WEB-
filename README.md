@@ -193,15 +193,11 @@ Aplikasi ini telah dilengkapi dengan beberapa fitur keamanan:
 
 ### Halaman Daftar Produk
 
-![Halaman Daftar Produk](screenshots/index_page.png)
+![Halaman Daftar Produk](daftar_produk.png)
 
 ### Form Tambah Produk
 
-![Form Tambah Produk](screenshots/create_page.png)
-
-### Halaman Detail Produk
-
-![Halaman Detail Produk](screenshots/detail_page.png)
+![Form Tambah Produk](tambah_produk.png)
 
 ## Troubleshooting
 
